@@ -1,26 +1,35 @@
 package edu.unca.csci201;
 
-import java.util.Scanner;
 
-public class MultipleChoiceQuestion implements Question {
-
+public class MultipleChoiceQuestion extends SuperQuestion implements Question {
 	
-	@Override
+	boolean ans;
+	public void setAnswer(String sanswer) {
+		if ((sanswer!="a")&&(sanswer!="b")&&(sanswer!="c")&&(sanswer!="d")) {
+			System.out.println("error!! wrong question format");
+		}
+	}
+	
 	public String getQuestion() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return question;
 	}
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		// TODO Auto-generated method stub
-		return false;
+		if(qanswer==answer) {
+			ans=true;
+		}
+		else {
+			ans=false;
+		}
+		return ans;
 	}
 
 	@Override
 	public String getCorrectAnswer() {
 		// TODO Auto-generated method stub
-		return null;
+		return qanswer;
 	}
-
+	
 }

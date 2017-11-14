@@ -6,14 +6,15 @@ public class SuperQuestion {
 
 	Scanner scan = new Scanner(System.in);
 	
-	String answer;
+	String qanswer;
 	String question;
+	boolean ans;
 	
-	public void setAnswer(){
+	public void setAnswer(String sanswer){
 		
-		answer=scan.nextLine();		
+		qanswer=sanswer;		
 	}
-	public void setQuestion() {
-		question=scan.nextLine();
+	public void setQuestion(String squestion) {
+		question=squestion;
 	}
 }

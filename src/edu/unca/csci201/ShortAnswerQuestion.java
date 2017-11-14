@@ -1,23 +1,28 @@
 package edu.unca.csci201;
 
-public class ShortAnswerQuestion implements Question {
+public class ShortAnswerQuestion extends SuperQuestion implements Question {
 
 	@Override
 	public String getQuestion() {
 		// TODO Auto-generated method stub
-		return null;
+		return question;
 	}
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		// TODO Auto-generated method stub
-		return false;
+		if(qanswer==answer) {
+			ans=true;
+		}
+		else {
+			ans=false;
+		}
+		return ans;
 	}
 
 	@Override
 	public String getCorrectAnswer() {
 		// TODO Auto-generated method stub
-		return null;
+		return qanswer;
 	}
 
 }
