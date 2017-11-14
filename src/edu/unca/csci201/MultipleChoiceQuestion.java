@@ -3,12 +3,6 @@ package edu.unca.csci201;
 
 public class MultipleChoiceQuestion extends SuperQuestion implements Question {
 	
-	boolean ans;
-	public void setAnswer(String sanswer) {
-		if ((sanswer!="a")&&(sanswer!="b")&&(sanswer!="c")&&(sanswer!="d")) {
-			System.out.println("error!! wrong question format");
-		}
-	}
 	
 	public String getQuestion() {
 		
@@ -17,13 +11,12 @@ public class MultipleChoiceQuestion extends SuperQuestion implements Question {
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		if(qanswer==answer) {
-			ans=true;
+		if(answer.equalsIgnoreCase(qanswer)){
+			return true;
 		}
 		else {
-			ans=false;
+			return false;
 		}
-		return ans;
 	}
 
 	@Override

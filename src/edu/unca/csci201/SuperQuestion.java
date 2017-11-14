@@ -8,7 +8,6 @@ public class SuperQuestion {
 	
 	String qanswer;
 	String question;
-	boolean ans;
 	
 	public void setAnswer(String sanswer){
 		
@@ -17,4 +16,6 @@ public class SuperQuestion {
 	public void setQuestion(String squestion) {
 		question=squestion;
 	}
+	
+	
 }

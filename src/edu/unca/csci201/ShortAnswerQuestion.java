@@ -10,13 +10,14 @@ public class ShortAnswerQuestion extends SuperQuestion implements Question {
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		if(qanswer==answer) {
-			ans=true;
+		
+		if(answer.equalsIgnoreCase(qanswer) ){
+			return true;
 		}
 		else {
-			ans=false;
+			return false;
 		}
-		return ans;
+		
 	}
 
 	@Override

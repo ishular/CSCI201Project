@@ -5,16 +5,19 @@ public class QuizTime {
 	public static void main(String[] args) {
 		
 		
-	Question q1 = new MultipleChoiceQuestion();
+	MultipleChoiceQuestion q1 = new MultipleChoiceQuestion();
 	Question q2 = new TrueFalseQuestion();
 	Question q3 = new ShortAnswerQuestion();
 	Quiz hurray = new Quiz();
 	
 	q1.setQuestion("What is the Meaning of the univers \n a)2 \n b)4 \n c)24 \n d)42");
-	q1.setAnswer("a");
+	q1.setAnswer("d");
+	
+	
 	
 	hurray.addQuestion(q1);
-	//hurray.giveQuiz();
+	System.out.println(hurray.giveQuiz());
+	
 
 }
 }
