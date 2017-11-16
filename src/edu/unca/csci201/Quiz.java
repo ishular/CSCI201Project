@@ -8,6 +8,7 @@ public class Quiz {
 	
 	Question[] quizQuestions=new Question[30];
 	int score;
+	
 
 	public void addQuestion(Question q) {
 		for(int i=0;i<=quizQuestions.length;i++) {

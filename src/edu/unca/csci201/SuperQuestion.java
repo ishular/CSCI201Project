@@ -16,6 +16,21 @@ public class SuperQuestion {
 	public void setQuestion(String squestion) {
 		question=squestion;
 	}
+	public boolean isCorrectAnswer(String answer) {
+		if(qanswer.equalsIgnoreCase(answer)){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	public String getCorrectAnswer() {
+		return qanswer;
+	}
 	
+	public String getQuestion() {
+		
+		return question;
+	}
 	
 }

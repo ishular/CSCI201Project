@@ -11,22 +11,10 @@ public class TrueFalseQuestion extends SuperQuestion implements Question {
 		if (sanswer!="true"||sanswer!="false") {
 			System.out.println("error!! wrong question format");
 		}
-	}
-	@Override
-	public boolean isCorrectAnswer(String answer) {
-		if(answer.equalsIgnoreCase(qanswer)) {
-			return true;
-		}
 		else {
-			return false;
+			qanswer=sanswer;
 		}
-		
 	}
-
-	@Override
-	public String getCorrectAnswer() {
-		
-		return qanswer;
-	}
+	
 
 }

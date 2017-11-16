@@ -3,26 +3,18 @@ package edu.unca.csci201;
 
 public class MultipleChoiceQuestion extends SuperQuestion implements Question {
 	
-	
-	public String getQuestion() {
-		
-		return question;
-	}
-
-	@Override
-	public boolean isCorrectAnswer(String answer) {
-		if(answer.equalsIgnoreCase(qanswer)){
-			return true;
+	public void setAnswer(String sanswer) {
+		if (sanswer.equalsIgnoreCase("a")||sanswer.equalsIgnoreCase("b")||sanswer.equalsIgnoreCase("c")||sanswer.equalsIgnoreCase("")) {
+			System.out.println("error!! wrong question format");
 		}
 		else {
-			return false;
+			qanswer=sanswer;
 		}
-	}
-
-	@Override
-	public String getCorrectAnswer() {
-		// TODO Auto-generated method stub
-		return qanswer;
 	}
 	
 }
+	
+	
+
+	
+	
