@@ -8,6 +8,13 @@ public class QuizTime {
 		TrueFalseQuestion TFVec[] = new TrueFalseQuestion[10];
 		ShortAnswerQuestion SAVec[] = new ShortAnswerQuestion[5];
 	//MultipleChoiceQuestionVec[0] = new MultipleChoiceQuestion();
+		for(int i= 0; i<10;i++) {
+			 MCQVec[i]=new MultipleChoiceQuestion();
+			 TFVec[i]=new TrueFalseQuestion();
+			if(i<5) {
+				SAVec[i]=new ShortAnswerQuestion();
+			}
+		}
 	
 	Quiz hurray = new Quiz();
 	
@@ -28,9 +35,9 @@ public class QuizTime {
 	MCQVec[7].setQuestion("Who is the better author? \n a)JK Rowling \n b)JR Tolkien \n c)Brandon Sanderson \n d)Stephenie Meyer");
 	MCQVec[7].setAnswer("c");
 	MCQVec[8].setQuestion("What is the most expensive magic card? \n a)Black Lotus \n b)Storm Crow \n c)Force of Will \n d)SnapCaster Mage");
-	MCQVec[8].setAnswer("d");
+	MCQVec[8].setAnswer("a");
 	MCQVec[9].setQuestion("What was the most common answer? \n a)d \n b)a \n c)c \n d)b");
-	MCQVec[9].setAnswer("d");
+	MCQVec[9].setAnswer("a");
 	
 	TFVec[0].setQuestion("The best way to travel is by Blue Police box.  \n True False");
 	TFVec[0].setAnswer("true");
@@ -48,7 +55,7 @@ public class QuizTime {
 	TFVec[6].setAnswer("true");
 	TFVec[7].setQuestion("I am running our of ideas.  \n True False");
 	TFVec[7].setAnswer("true");
-	TFVec[8].setQuestion("This is the 19th question.  \n True False");
+	TFVec[8].setQuestion("This is the 19th question created.  \n True False");
 	TFVec[8].setAnswer("true");
 	TFVec[9].setQuestion("Loading Ready Run are the best internet content creators.  \n True False");
 	TFVec[9].setAnswer("true");
@@ -64,14 +71,14 @@ public class QuizTime {
 	SAVec[4].setQuestion("Am I an english Major?");
 	SAVec[4].setAnswer("I hope not");
 
-	for(int i= 0; i<10;i++) {
-	hurray.addQuestion(MCQVec[i]);
-	hurray.addQuestion(TFVec[i]);
-	if(i<5) {
-		hurray.addQuestion(SAVec[i]);
+	for(int j= 0; j<10;j++) {
+	hurray.addQuestion(MCQVec[j]);
+	hurray.addQuestion(TFVec[j]);
+	if(j<5) {
+		hurray.addQuestion(SAVec[j]);
 	}
 	}
-	System.out.println(hurray.giveQuiz());
+	System.out.println("Your Score is: "+hurray.giveQuiz()+"%");
 	
 
 }

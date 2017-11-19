@@ -7,9 +7,11 @@ public class Quiz {
 	Scanner scan = new Scanner(System.in);
 	
 	Question[] quizQuestions=new Question[30];
-	int score;
-	
-
+	Question[] wrongQuestions=new Question[30];
+	double score;
+	double questioncount = 0;
+	double finalScore=0;
+	int countWQ=0;
 	public void addQuestion(Question q) {
 		for(int i=0;i<=quizQuestions.length;i++) {
 			if(quizQuestions[i]==null) {
@@ -20,8 +22,8 @@ public class Quiz {
 	}
 	
 	public double giveQuiz(){
-		int questioncount=0;
 		for(int i=0; i <= quizQuestions.length; i++){
+			
 			if(quizQuestions[i]==null) {
 				System.out.println("End of Quiz");
 				break;
@@ -32,12 +34,19 @@ public class Quiz {
 			if(qans==true){
 				score++;
 			}
+			else {
+				wrongQuestions[countWQ]=quizQuestions[i];
+				countWQ++;
+			}
 			questioncount++;
 		}
-		double finalScore = (score/questioncount)*100;
+		finalScore = (score/questioncount)*100;
+		for(int l =0; l<countWQ;l++) {
+			System.out.println("you Wrongly answered: "+wrongQuestions[l].getQuestion());
+			System.out.println(wrongQuestions[l].getCorrectAnswer()+" Is the right Answer");
+		}
 		
-		
-		return finalScore;
+		return (finalScore);
 		
 	}
 	

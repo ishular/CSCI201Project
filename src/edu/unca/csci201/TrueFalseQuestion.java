@@ -5,10 +5,10 @@ public class TrueFalseQuestion extends SuperQuestion implements Question {
 	
 	public void setAnswer(String sanswer) {
 		if (sanswer.equalsIgnoreCase("true")||sanswer.equalsIgnoreCase("false")){
-			System.out.println("error!! wrong question format");
+			qanswer=sanswer;
 		}
 		else {
-			qanswer=sanswer;
+			System.out.println("error!! wrong question format");
 		}
 	}
 	
