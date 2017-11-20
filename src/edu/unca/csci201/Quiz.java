@@ -40,7 +40,7 @@ public class Quiz {
 			}
 			questioncount++;
 		}
-		finalScore = (score/questioncount)*100;
+		finalScore = (score/questioncount);
 		for(int l =0; l<countWQ;l++) {
 			System.out.println("you Wrongly answered: "+wrongQuestions[l].getQuestion());
 			System.out.println(wrongQuestions[l].getCorrectAnswer()+" Is the right Answer");

@@ -1,9 +1,11 @@
 package edu.unca.csci201;
 
+import java.text.NumberFormat;
+
 public class QuizTime {
 
 	public static void main(String[] args) {
-	
+		NumberFormat df = NumberFormat.getPercentInstance();	
 		MultipleChoiceQuestion MCQVec []= new MultipleChoiceQuestion[10];
 		TrueFalseQuestion TFVec[] = new TrueFalseQuestion[10];
 		ShortAnswerQuestion SAVec[] = new ShortAnswerQuestion[5];
@@ -78,7 +80,7 @@ public class QuizTime {
 		hurray.addQuestion(SAVec[j]);
 	}
 	}
-	System.out.println("Your Score is: "+hurray.giveQuiz()+"%");
+	System.out.println("Your Score is: "+df.format(hurray.giveQuiz()));
 	
 
 }
